@@ -18,6 +18,8 @@
 ) = [
   #let in-body = state("in-body", false)
 
+  #let headingFont = ("Montserrat","DejaVu Sans")
+
   #let secondaryColour = accentColour.lighten(20%)
 
   #set par(leading: 0.75em, spacing: 1.2em)
@@ -25,7 +27,7 @@
   #show heading: it => block(
     above:1.5em,
     below:1em,
-    text(font: "Montserrat",fill:accentColour,it) 
+    text(font: headingFont,fill:accentColour,it) 
   )
 
   #set heading(
@@ -71,7 +73,7 @@
   // Custom table settings where the heading is bold, white, serif font. Table has dark gray borders and left-aligned text. 
   #show table.cell.where(y: 0): set text(
     weight: "bold",
-    font:"Montserrat",
+    font:headingFont,
     fill: tableHeaderTextColour
   )
   #set table(
@@ -135,17 +137,17 @@
       fill:accentColour,
       inset:(x:2.5cm,y:1.5cm),
       align(bottom)[
-        #text(size:20pt,weight:"bold",font:"Montserrat",fill:white)[#courseName]
+        #text(size:20pt,weight:"bold",font:headingFont,fill:white)[#courseName]
         #v(-0.5em)
-        #text(size:14pt,weight:"bold",font:"Montserrat",fill:accentColour.lighten(70%))[#courseCode]
+        #text(size:14pt,weight:"bold",font:headingFont,fill:accentColour.lighten(70%))[#courseCode]
       ]
     )
   )
 
   #align(center + horizon)[
-    #text(size:12pt,font:"Montserrat",fill:accentColour.lighten(25%))[#semester]
+    #text(size:12pt,font:headingFont,fill:accentColour.lighten(25%))[#semester]
     #v(1em)
-    #text(size:28pt,font:"Montserrat",fill:accentColour,weight:"bold")[#title]
+    #text(size:28pt,font:headingFont,fill:accentColour,weight:"bold")[#title]
     #v(0.5em)
     #line(length:40%,stroke:accentColour.lighten(60%))
   ]
@@ -164,12 +166,12 @@
           columns:(1fr,auto),
           align:horizon,
           [
-            #text(size:14pt,font:"Montserrat",fill:white,weight:"bold")[#author]
+            #text(size:14pt,font:headingFont,fill:white,weight:"bold")[#author]
             #v(-0.5em)
-            #text(size:11pt,font:"Montserrat",fill:accentColour.lighten(70%))[Student ID: #studentID]
+            #text(size:11pt,font:headingFont,fill:accentColour.lighten(70%))[Student ID: #studentID]
           ],
           [
-          #text(size:11pt,font:"Montserrat",fill:accentColour.lighten(94%))[ *Submission date:* \
+          #text(size:11pt,font:headingFont,fill:accentColour.lighten(94%))[ *Submission date:* \
             #date.display("[day]/[month]/[year]")]
           ]
         )

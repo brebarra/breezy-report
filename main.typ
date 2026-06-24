@@ -1,5 +1,4 @@
-//#import "@preview/breezy-report:0.1.0": *
-#import "template.typ": *
+#import "@preview/breezy-report:0.1.0": *
 
 #show: breezy.with(
   semester:"Semester 1 2026",
