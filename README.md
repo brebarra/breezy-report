@@ -30,4 +30,5 @@ A clean, colour-customisable engineering report template for Typst. Designed for
 
 ## Default fonts
  - **Georgia**: Body text.
- - **Montserrat**: Headings and title page. Must be installed locally - download from [Google Fonts](https://fonts.google.com/specimen/Montserrat)
+ - **Montserrat**: Headings and title page. Must be installed locally - download from [Google Fonts](https://fonts.google.com/specimen/Montserrat).
+ - **DejaVu Sans**. Fallback font for headings & title page is Montserrat is not installed.
