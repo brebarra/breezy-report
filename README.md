@@ -5,7 +5,7 @@ A clean, colour-customisable engineering report template for Typst. Designed for
 ## Usage
 
 ```typst
-#import "@preview/breezy-report:0.1.0": *
+#import "@preview/breezy-report:0.1.0": breezy, end-breezy
 
 #show: breezy.with (
   semester: "Semester 1 2026",
@@ -18,6 +18,13 @@ A clean, colour-customisable engineering report template for Typst. Designed for
 )
 
 //Your content goes here
+
+//If you need to include references, add the following after the rest of your body. The end-breezy function removes the top bar from appearing on the reference pages.
+
+#end-breezy()
+#pagebreak()
+#bibliography("ref.bib", style: "ieee", title: "References")
+
 ```
 
 ## Parameters
@@ -31,7 +38,7 @@ A clean, colour-customisable engineering report template for Typst. Designed for
 ## Default fonts
  - **Georgia**: Body text.
  - **Montserrat**: Headings and title page. Must be installed locally - download from [Google Fonts](https://fonts.google.com/specimen/Montserrat).
- - **DejaVu Sans**. Fallback font for headings & title page is Montserrat is not installed.
+ - **Arial**: Fallback font for headings & title page is Montserrat is not installed.
 
 ## Example pages
 ![An example title page from the breezy-report template with dark purple bars across the top and bottom of the page, with the student name, ID, course name and course ID overlayed. The title is in the centre of the page.](imgs/1.png)

@@ -4,6 +4,12 @@
 
 #let date = datetime.today()
 
+#let in-body = state("in-body", false)
+
+#let end-breezy(bib-file: none) = {
+  in-body.update(false)
+}
+
 #let breezy(
   semester: "Semester 1, 20##", 
   course-code: "ENGE500",
@@ -16,9 +22,8 @@
   table-header-text-colour:white,
   report
 ) = [
-  #let in-body = state("in-body", false)
 
-  #let headingFont = ("Montserrat","DejaVu Sans")
+  #let headingFont = ("Montserrat","Arial")
 
   #let secondaryColour = accent-colour.lighten(20%)
 
@@ -218,10 +223,4 @@
   
   #pagebreak()
   #report
-  #in-body.update(false)
-
-  #if bib-file != none [
-    #pagebreak()
-    #bibliography(bib-file, style: "ieee", title: "References")
-  ]
 ]
