@@ -33,7 +33,6 @@ A clean, colour-customisable engineering report template for Typst. Designed for
 |---|---|---|
 | `accentColour` | `rgb("#300649")` | Primary accent colour |
 | `tableHeaderTextColour` | `white` | Table header text colour |
-| `bibFile` | `none` | Path to `.bib` file (if applicable) |
 
 ## Default fonts
  - **Georgia**: Body text.
